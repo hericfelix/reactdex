@@ -26,3 +26,13 @@ export const TopSvg = styled.svg`
     stroke-linejoin: round;
   }
 `;
+
+export const Connector = styled.div`
+  width: 60px;
+  height: 620px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+`;
