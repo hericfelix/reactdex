@@ -31,4 +31,16 @@ export const SmallLight = styled.div`
   border-radius: 50%;
   border: 0.2px solid black;
   margin-left: 8px;
+  background-color: ${(props) => props.color};
+  div {
+    position: relative;
+    width: 7px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fefefe;
+    left: 13%;
+    top: 8%;
+    opacity: 0.9;
+    transform: rotate(-25deg);
+  }
 `;
