@@ -5,8 +5,8 @@ function RightSide() {
   return (
     <Container>
       <TopSvg>
-        <polyline points="0,2 200,2 300,82 400,82" />
-        <polygon points="5,11 195,11 295,91 395,91 395,610 5,610" />
+        <polyline points="0,2 120,2 209,55 435,55" />
+        <polygon points="5,11 115,11 204,64 430,64 430,615 5,615" />
       </TopSvg>
     </Container>
   );

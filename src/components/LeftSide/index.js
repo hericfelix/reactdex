@@ -8,8 +8,8 @@ function LeftSide() {
     <Container>
       <LeftSideLightsContainer />
       <TopSvg>
-        <polyline points="0,140 300,140 400,80 500,80" />
-        <polygon points="5,148 303,148 403,88 435,88 435,695 5,695" />
+        <polyline points="0,140 220,140 320,80 500,80" />
+        <polygon points="5,148 223,148 323,88 435,88 435,695 5,695" />
       </TopSvg>
       <DisplayContainer />
       <Connector />

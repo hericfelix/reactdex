@@ -2,28 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  height: 615px;
-  width: 400px;
+  height: 623px;
+  width: 434px;
   background-color: #dd0b2d;
   border: 3px solid black;
   border-top: none;
   border-radius: 0 0 10px 0;
-  ::before {
-    content: "";
-    border-right: 100px solid #fff;
-    border-bottom: 80px solid transparent;
-    position: absolute;
-    z-index: -0;
-    right: 100px;
-  }
-
-  ::after {
-    content: "";
-    border-right: 110px solid #fff;
-    border-bottom: 80px solid #fff;
-    position: absolute;
-    right: -10px;
-  }
+  clip-path: polygon(0 0, 123px 0, 212px 54px, 101% 54px, 101% 101%, 0 101%);
 `;
 
 export const TopSvg = styled.svg`
