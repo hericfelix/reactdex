@@ -7,6 +7,6 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
   display: flex;
   align-items: flex-end;
-  box-shadow: -6px 5px #460510;
+  box-shadow: 1.5px 5px #460510;
   border-radius: 10px 10px 10px 10px;
 `;
