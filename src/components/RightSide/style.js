@@ -127,4 +127,17 @@ export const OpenArrow = styled.div`
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid yellow;
+  cursor: pointer;
+`;
+
+export const Screen = styled.div`
+  width: 340px;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 100px;
+  background-color: #151818;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
 `;

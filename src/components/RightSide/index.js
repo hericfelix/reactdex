@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Container, Content, TopSvg, Front, Back, OpenArrow } from "./style";
+import {
+  Container,
+  Content,
+  TopSvg,
+  Front,
+  Back,
+  OpenArrow,
+  Screen,
+} from "./style";
 
 function RightSide() {
   const [showBack, setShowBack] = useState(true);
@@ -18,6 +26,7 @@ function RightSide() {
           <TopSvg>
             <polygon points="5,64 226,64 315,11 430,11 430,615 5,615" />
           </TopSvg>
+          <Screen />
         </Front>
         <Back>
           <OpenArrow onClick={handleFlip} />
