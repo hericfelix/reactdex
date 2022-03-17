@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RightSideButtons from "../RightSideButtons";
 import {
   Container,
   Content,
@@ -27,6 +28,7 @@ function RightSide() {
             <polygon points="5,64 226,64 315,11 430,11 430,615 5,615" />
           </TopSvg>
           <Screen />
+          <RightSideButtons />
         </Front>
         <Back>
           <OpenArrow onClick={handleFlip} />

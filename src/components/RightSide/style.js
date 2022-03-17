@@ -2,39 +2,39 @@ import styled, { keyframes, css } from "styled-components";
 
 const openAnimation = keyframes`
 0% {
-  transform:rotateY(0deg) translateX(0);
+  transform: perspective(1600px) rotateY(0deg) translateX(0);
 }
 20% {
-  transform:rotateY(30deg) translateX(20px);
+  transform: perspective(1600px) rotateY(30deg)  translateX(0);
 }
 35% {
-  transform:rotateY(50deg) translateX(50px);
+  transform: perspective(1600px) rotateY(50deg)  translateX(0);
 }
 50% {
-  transform:rotateY(80deg) translateX(140px);
+  transform: perspective(1600px) rotateY(80deg)  translateX(0);
 }
 54% {
-  transform:rotateY(88deg) translateX(400px)
+  transform: perspective(1600px) rotateY(88deg)  translateX(0)
 }
 
 57% {
-  transform:rotateY(93deg) translateX(-400px)
+  transform:perspective(1600px) rotateY(93deg)  translateX(-10px)
 }
 
 60% {
-  transform:rotateY(100deg) translateX(-200px);
+  transform:perspective(1600px) rotateY(100deg)  translateX(-20px);
 }
 70% {
-  transform:rotateY(120deg) translateX(-90px)
+  transform:perspective(1600px) rotateY(120deg)  translateX(-30px)
 }
 80% {
-  transform:rotateY(140deg) translateX(-64px)
+  transform:perspective(1600px) rotateY(140deg)  translateX(-40px)
 }
 90% {
-  transform:rotateY(160deg) translateX(-60px)
+  transform:perspective(1600px) rotateY(160deg)  translateX(-50px)
 }
 100% {
-  transform: rotateY(180deg) translateX(-57px);
+  transform:perspective(1600px) rotateY(180deg)  translateX(-57px);
 }
 `;
 
@@ -54,7 +54,6 @@ export const Container = styled.div`
           ${openAnimation} 1s linear forwards
         `};
   transform-style: preserve-3d;
-  perspective: 800px;
   box-shadow: 0 5px #460510;
   transform-origin: right;
 `;
@@ -83,7 +82,7 @@ export const Content = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  transition-delay: 0.45s;
+  transition-delay: 0.58s;
   transform-style: preserve-3d;
   transform: ${(props) => (props.showBack ? "rotateY(180deg)" : "none")};
   text-align: center;
