@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #dd0b2d;
+  background-color: var(--bright-red);
   height: 700px;
   width: 500px;
   position: relative;
   border: 3px solid black;
   border-radius: 10px 10px 0 10px;
-  box-shadow: -6px 5px #460510;
+  box-shadow: -6px 5px var(--dark-red);
 `;
 
 export const TopSvg = styled.svg`

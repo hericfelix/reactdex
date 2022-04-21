@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
+import { usePokemons } from '../../contexts/pokemons';
+import { capitalizeFirstLetter } from '../../utils';
 import {
   Container,
   NavContainer,
   RoundButton,
+  SmallScreen,
   SmallScreenContainer,
-} from "./style";
+} from './style';
 
 const LeftSideButtons = () => {
+  const { pokemon } = usePokemons();
   return (
     <Container>
       <RoundButton />
@@ -15,7 +19,9 @@ const LeftSideButtons = () => {
           <div></div>
           <div></div>
         </div>
-        <div />
+        <SmallScreen>
+          <p>{pokemon?.name ? capitalizeFirstLetter(pokemon.name) : ''}</p>
+        </SmallScreen>
       </SmallScreenContainer>
       <NavContainer>
         <div>

@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes, css } from 'styled-components';
 
 const openAnimation = keyframes`
 0% {
@@ -38,23 +38,32 @@ const openAnimation = keyframes`
 }
 `;
 
+const glowAnimation = keyframes`
+0% {
+  border-left: 15px solid yellow;
+}
+100% {
+  border-left: 15px solid rgb(30,30,30);
+}
+`;
+
 export const Container = styled.div`
   position: absolute;
   height: 622px;
   width: 438px;
-  background-color: #dd0b2d;
+  background-color: var(--bright-red);
   border: 3px solid black;
   border-top: none;
   border-radius: 0 0 0 10px;
   clip-path: polygon(0 54px, 226px 54px, 315px 0, 101% 0, 101% 101%, 0 101%);
   animation: ${(props) =>
     props.showBack
-      ? "none"
+      ? 'none'
       : css`
           ${openAnimation} 1s linear forwards
         `};
   transform-style: preserve-3d;
-  box-shadow: 0 5px #460510;
+  box-shadow: 0 5px var(--dark-red);
   transform-origin: right;
 `;
 
@@ -84,7 +93,7 @@ export const Content = styled.div`
   height: 100%;
   transition-delay: 0.58s;
   transform-style: preserve-3d;
-  transform: ${(props) => (props.showBack ? "rotateY(180deg)" : "none")};
+  transform: ${(props) => (props.showBack ? 'rotateY(180deg)' : 'none')};
   text-align: center;
 `;
 
@@ -95,6 +104,12 @@ export const Front = styled.div`
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: rotateY(0deg);
+`;
+
+export const InnerContent = styled.div`
+  transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
 `;
 
 export const Back = styled.div`
@@ -127,16 +142,10 @@ export const OpenArrow = styled.div`
   border-bottom: 15px solid transparent;
   border-left: 15px solid yellow;
   cursor: pointer;
-`;
-
-export const Screen = styled.div`
-  width: 340px;
-  border: 2px solid black;
-  border-radius: 10px;
-  height: 100px;
-  background-color: #151818;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+  animation: ${glowAnimation};
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 0.9s;
+  animation-direction: alternate;
+  animation-delay: 0.8s;
 `;

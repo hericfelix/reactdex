@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 320px;
@@ -25,7 +25,7 @@ export const DisplayLights = styled.div`
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background-color: #dd0b2d;
+    background-color: var(--bright-red);
     border: 0.2px solid black;
     filter: brightness(1.5);
   }
@@ -37,6 +37,23 @@ export const Screen = styled.div`
   background-color: black;
   margin-top: 10px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 185px;
+    height: 185px;
+    position: relative;
+  }
+
+  ::before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    box-shadow: 0 0 80px 40px #a1eaff;
+    border-radius: 50%;
+  }
 `;
 
 export const DisplayButtons = styled.div`
@@ -49,7 +66,7 @@ export const DisplayButtons = styled.div`
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #dd0b2d;
+    background-color: var(--bright-red);
     border: 0.2px solid black;
     filter: brightness(1.5);
     box-shadow: -1.5px 1.5px #3b030c;

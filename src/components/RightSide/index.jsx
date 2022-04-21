@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import RightSideButtons from "../RightSideButtons";
+import React from 'react';
+import RightSideAuxButtons from '../RightSideAuxButtons';
+import RightSideButtons from '../RightSideButtons';
+import RightSideScreen from '../RightSideScreen';
+import RightSideSmallScreens from '../RightSideSmallScreens';
 import {
   Container,
   Content,
@@ -7,12 +10,10 @@ import {
   Front,
   Back,
   OpenArrow,
-  Screen,
-} from "./style";
+  InnerContent,
+} from './style';
 
-function RightSide() {
-  const [showBack, setShowBack] = useState(true);
-
+function RightSide({ showBack, setShowBack }) {
   const handleFlip = () => {
     setShowBack(!showBack);
   };
@@ -27,8 +28,12 @@ function RightSide() {
           <TopSvg>
             <polygon points="5,64 226,64 315,11 430,11 430,615 5,615" />
           </TopSvg>
-          <Screen />
-          <RightSideButtons />
+          <InnerContent>
+            <RightSideScreen />
+            <RightSideButtons />
+            <RightSideAuxButtons />
+            <RightSideSmallScreens />
+          </InnerContent>
         </Front>
         <Back>
           <OpenArrow onClick={handleFlip} />
